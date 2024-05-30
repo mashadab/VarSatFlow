@@ -27,7 +27,7 @@ https://github.com/mashadab/VarSatFlow/assets/39770999/e8a09d0c-3f0a-4a8c-9c04-8
 Video : Flux partitioning in a steady gravity current passing symmetrically over a barrier. $`s_w`$ is the water saturation which is the fraction of pore space occupied by water. Left: Actual video, Right: Saturated region being tracked with solid red line being saturated-unsaturated region boundary.
 
 <p align="center">
-<img src="./Cover/Cover.png" height="300">
+<img src="./Cover/Cover.png" height="250">
 </p>
 Figure : Flux partitioning in a steady gravity current passing over a barrier. 
 (a-d): Experiments conducted by Hesse and Woods (2010). 
