@@ -12,6 +12,7 @@ In this repository, we present an efficient, conservative and large scale numeri
 
 ## Associated Papers / Citations to use
 [1] Shadab, M.A. and Hesse, M.A., 2024. A hyperbolic-elliptic PDE model and conservative numerical method for gravity-dominated variably-saturated groundwater flow, Advances in Water Resources, Elsevier.
+
 [2] Shadab, M. A. and Hesse, M. A. (2024). mashadab/VarSatFlow: v1.0 (v1.0). Zenodo. https://doi.org/10.5281/zenodo.11398273
 
 ## Authors
