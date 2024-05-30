@@ -6,7 +6,8 @@ In this repository, we present an efficient, conservative and large scale numeri
 <img src="./Cover/CoverNew.png" height="400"> 
  </p>
  <p align="center">
-  Figure : Gravity-dominated drainage of multiple saturated drops across an unsaturated porous medium. $'s_w'$ is the water saturation, i.e., fraction of pore space occupied by water phase.
+  Figure : Gravity-dominated drainage of multiple saturated drops across an unsaturated porous medium. 
+  Here $s_w$ is the water saturation, i.e., fraction of pore space occupied by water phase.
 </p>
 
 ## Associated Paper / Citation to use
