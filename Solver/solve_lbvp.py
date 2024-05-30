@@ -1,0 +1,106 @@
+# import python libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.sparse
+
+# import personal libraries
+import build_gridfun
+import build_opsfun
+from build_bndfun import build_bnd
+from mobilityfun import mobility
+
+# author: Mohammad Afzal Shadab
+# date: 2/25/2020
+# Description
+# Computes the solution $u$ to the linear differential problem given by
+#
+# $$\mathcal{L}(u)=f \quad x\in \Omega $$
+#
+# with boundary conditions
+#
+# $$\mathcal{B}(u)=g \quad x\in\partial\Omega$$.
+#
+# Input:
+# L = matrix representing the discretized linear operator of size N by N, 
+#     where N is the number of degrees of fredom
+# f = column vector representing the discretized r.h.s. and contributions
+#     due non-homogeneous Neumann BC's of size N by 1
+# B = matrix representing the constraints arising from Dirichlet BC's of
+#     size Nc by N
+# g = column vector representing the non-homogeneous Dirichlet BC's of size
+#     Nc by 1.
+# N = matrix representing a orthonormal basis for the null-space of B and
+#     of size N by (N-Nc).
+# Output:
+# u = column vector of the solution of size N by 1
+
+class grid:
+    def __init__(self):
+        self.xmin = []
+        self.xmax = []
+        self.Nx = []
+
+class Param:
+    def __init__(self):
+        self.dof_dir = []       # identify cells on Dirichlet bnd
+        self.dof_f_dir = []     # identify faces on Dirichlet bnd
+        self.dof_neu = []       # identify cells on Neumann bnd
+        self.dof_f_neu = []     # identify faces on Neumann bnd
+        self.g = []             # column vector of non-homogeneous Dirichlet BCs (Nc X 1)
+        self.qb = []            
+
+#grid and operators
+grid.xmin = 0.0
+grid.xmax = 1.0
+grid.Nx   = 10
+build_gridfun.build_grid(grid)
+[D,G,I]=build_opsfun.build_ops(grid)
+#applying boundary condition
+Param.dof_dir   = np.array([grid.dof_xmin])     # identify cells on Dirichlet bnd
+Param.dof_f_dir = np.array([grid.dof_f_xmin])   # identify faces on Dirichlet bnd
+Param.dof_neu   = np.array([grid.dof_xmax])     # identify cells on Neumann bnd
+Param.dof_f_neu = np.array([grid.dof_f_xmax])   # identify faces on Neumann bnd
+Param.qb = np.array([1.0])                      # set flux at Neumann bnd
+Param.g  = np.array([0.0])                      # set head at Dirichlet bnd
+[B,N,fn] = build_bnd(Param,grid,I)              # Build constraint matrix and basis for its nullspace
+fs = np.zeros([grid.N,1])                       # r.h.s. (zero)
+L = -np.mat(D)*np.mat(G)                        # Laplacian
+
+f = fs+fn
+if not B.any():
+    u = np.linalg.solve(L, f)
+else:
+    up = np.empty([len(f),1])
+    
+    up = np.mat(np.transpose(B))*np.mat(np.linalg.solve(np.mat(np.mat(B))*np.mat(np.transpose(B)),Param.g))
+    
+    u0 = np.mat(N)*np.mat(np.linalg.solve(np.transpose(N)*np.mat(L)*np.mat(N),np.transpose(N)*(f-np.mat(L)*np.mat(up))))
+    u = u0 + up
+
+#plot
+fig, ax= plt.subplots()
+ax.plot(grid.xc,u,'r-',label='u')
+legend = ax.legend(loc='upper left', shadow=False, fontsize='x-large')
+ax.set_xlabel('Position')
+ax.set_ylabel('Head')
+
+#rho_top = 1.0  #rho of the fluid at top 
+#rho_bottom = 0.5 #density of the fluid at botttom
+#grav = 9.801 
+#K = 
+#drho = rho_top-rho_bottom
+
+#initial condition
+#s_w[0:(grid.N/2)/2] = 1 #wetting phase
+#s_w[(grid.N/2)/2:grid.N] = 0 #non-wetting phase
+
+# boundary conditions
+#g = [0, rho_top*grav*(grid.xc[grid.N-1])] #potential at top and bottom is fixed phi_a=pa+rho_a g z
+
+#evolution
+
+#for i in np.arange(ti, tf, dt):
+    #f_w vector
+    #f_w = np.array(lambda_w*lambda_nw)
+    #s_w = s_old + dt*K*D*fw
+    #s_w = s_old
