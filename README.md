@@ -2,6 +2,10 @@
 
 In this repository, we present an efficient, conservative and large scale numerical simulator for variably saturated flow in the limit of negligible capillary forces. The model modifies Richards equation to capture complete saturation. Here we implement a tensor product grid-based conservative finite difference solver. The codes are written in Open Source Discrete Operator Toolbox (PyDOT) developed by Shadab based on Hesse's toolbox in MATLAB (MDOT). The codes include one and two-dimensional tests which have been validated with Hydrus simulations, experiments and hydraulic theory. The repository contains codes of variably saturated groundwater model to replicate the figures in Shadab and Hesse (2024), Advances in Water Resources, Elsevier.
 
+<p align="center">
+<img src="./Cover/CoverNew.png" height="300">
+</p>
+
 ## Associated Paper / Citation to use
 Shadab, M.A. and Hesse, M.A., 2024. A hyperbolic-elliptic PDE model and conservative numerical method for gravity-dominated variably-saturated groundwater flow, Advances in Water Resources, Elsevier.
 
