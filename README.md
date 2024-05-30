@@ -14,6 +14,10 @@ Oden Institute for Computational Engineering and Sciences / Jackson School of Ge
 The University of Texas at Austin
 
 ### Example: Infiltration on top of an impermeable soil layer leading to formation of perched water table
+
+
+Video : Flux partitioning in a steady gravity current passing symmetrically over a barrier.
+
 <p align="center">
 <img src="./CoverFigures/Cover.png" height="370">
 </p>
