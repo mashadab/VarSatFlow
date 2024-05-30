@@ -4,7 +4,8 @@ In this repository, we present an efficient, conservative and large scale numeri
 
 <p align="center">
 <img src="./Cover/CoverNew.png" height="400"> 
-  
+ </p>
+ <p align="center">
   Figure : Gravity-dominated drainage of multiple saturated drops across an unsaturated porous medium
 </p>
 
