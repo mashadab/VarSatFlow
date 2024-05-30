@@ -15,6 +15,7 @@ The University of Texas at Austin
 
 ### Example: Infiltration on top of an impermeable soil layer leading to formation of perched water table
 
+https://github.com/mashadab/VarSatFlow/CoverVideo.mov
 
 Video : Flux partitioning in a steady gravity current passing symmetrically over a barrier.
 
