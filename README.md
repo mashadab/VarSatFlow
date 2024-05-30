@@ -13,17 +13,15 @@ Shadab, M.A. and Hesse, M.A., 2024. A hyperbolic-elliptic PDE model and conserva
 Oden Institute for Computational Engineering and Sciences / Jackson School of Geosciences / University of Texas Institute for Geophysics
 The University of Texas at Austin
 
-## Getting Started
-### Infiltration on top of an impermeable soil layer leading to formation of perched water table
+### An example : Infiltration on top of an impermeable soil layer leading to formation of perched water table
 <p align="center">
 <img src="./CoverFigures/Cover.png" height="370">
 </p>
-Figure : Flux partitioning in a steady gravity current passing over a barrier. (a-d): Experiments conducted by Hesse and Woods (2010). (e-f): Simulations performed using the VarSatFlow model. (i) Dependence of the flux partitioning, $`Q_b/(Q_a+Q_b)`$, on the source location, $`L_a/(L_a+L_b)`$, with subscript a is left and b is right side. The panel labels give the dimensionless source locations, $`L_a/(L_a+L_b)`$.
+Figure : Flux partitioning in a steady gravity current passing over a barrier. (a-d): Experiments conducted by Hesse and Woods (2010). (e-f): Simulations performed using the VarSatFlow model. (i) Dependence of the flux partitioning, `Q_b/(Q_a+Q_b)`, on the source location, `L_a/(L_a+L_b)`, with subscript a is left side and b is right side variable. The panel labels give the dimensionless source locations, `L_a/(L_a+L_b)`.
 
 
 
 ### Dependences
-
 hyperbolic-infiltration-theory requires the following packages to function:
 - [Python](https://www.python.org/) version 3.5+
 - [Numpy](http://www.numpy.org/) >= 1.16
@@ -35,5 +33,5 @@ hyperbolic-infiltration-theory requires the following packages to function:
 After cloning the repository and installing the required libraries, run the python files corresponding to the figure numbers as given in the paper. Codes can be run either directly or on an IDE such as Anaconda Spyder. Use `%matplotlib qt` to change the plotting from inline to separate window in Spyder. The resulting plots are collected in the folder `Figures`.
 
 ### Non-dimensionalization
-The depth coordinate `z` is scaled with characteristic length `z_0`, time is scaled with characteristic time `z_0/f_c` and infiltration rate `I(t)` (or volumetric flux) is scaled with the infiltration capacity `f_c`. Therefore, the dimensionless variables are `z'=z/z_0`, `t'=tf_c/z_0`, and $`f'=I(t)/f_c`$.
+The depth coordinate `z` is scaled with characteristic length `z_0`, time is scaled with characteristic time `z_0/f_c` and infiltration rate `I(t)` (or volumetric flux) is scaled with the infiltration capacity `f_c` or surface saturated hydraulic conductivity `K`. Therefore, the dimensionless variables are `z'=z/z_0`, `t'=tf_c/z_0`, and $`f'=I(t)/f_c`$.
 
