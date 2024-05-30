@@ -94,8 +94,8 @@ def comp_flux(D,Kd,G,h,fs,Grid,Param):
     dof_cell = np.subtract(dof_cell,1)
     dof_face = np.subtract(dof_face,1)
     
-    #print(np.shape(np.transpose([sign])),np.shape((D[dof_cell,:]@ q)- fs[dof_cell,:]), np.shape(Grid.V[dof_cell,:]/Grid.A[dof_face,:]))
-    q[dof_face] =  np.transpose([sign]) * ((D[dof_cell,:]@ q)- fs[dof_cell,:])*Grid.V[dof_cell,:]/Grid.A[dof_face,:]
+    print(np.shape(np.transpose([sign])),np.shape((D[dof_cell,:]@ q)- fs[dof_cell,:]), np.shape(Grid.V[dof_cell,:]/Grid.A[dof_face,:]))
+    q[dof_face] =  np.transpose([np.ravel(sign) * (np.ravel(D[dof_cell,:]@ q - fs[dof_cell,:]))*np.ravel(Grid.V[dof_cell,:]/Grid.A[dof_face,:])])
     
     #q[dof_face] =  np.transpose([sign]) * ((D[dof_cell,:]@ q)- sp.csr_matrix.toarray(fs[dof_cell,:]))*Grid.V[dof_cell,:]/Grid.A[dof_face,:]
       
