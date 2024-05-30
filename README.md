@@ -1,4 +1,4 @@
-# VarSatFlow: A Variably Saturated groundwater Flow model (Paper [PDF](https://www.python.org/](https://arxiv.org/abs/2210.04724)  here)
+# VarSatFlow: A Variably Saturated groundwater Flow model (Paper [PDF](https://arxiv.org/abs/2210.04724)  here)
 
 This repository contains codes of variably saturated groundwater model to replicate to the figures in Shadab and Hesse (2024), Advances in Water Resources, Elsevier. In this work, we present an efficient, conservative and large scale numerical simulator for variably saturated flow in the limit of negligible capillary forces. The model modifies Richards equation to capture complete saturation. Here we implement a tensor product grid-based conservative finite difference solver. The codes are written in Open Source Discrete Operator Toolbox (PyDOT) developed by Shadab based on Hesse's toolbox in MATLAB (MDOT). The codes include one and two-dimensional tests which have been validated with Hydrus simulations, experiments and hydraulic theory. The codes given correspond to the figures from the research paper. 
 
