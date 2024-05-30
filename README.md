@@ -15,7 +15,7 @@ The University of Texas at Austin
 
 ### Example: Infiltration in soil with an impermeable soil layer leading to formation of a perched water table
 
-<video src="https://github.com/mashadab/VarSatFlow/blob/main/Cover/CoverVideo.mov" width="300" />
+https://github.com/mashadab/VarSatFlow/blob/main/Cover/CoverVideo.mov
 
 Video : Flux partitioning in a steady gravity current passing symmetrically over a barrier. $`s_w`$ is the water saturation which is the fraction of pore space occupied by water. Left: Actual video, Right: Saturated region being tracked with solid red line being saturated-unsaturated region boundary.
 
