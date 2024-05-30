@@ -1,6 +1,6 @@
 # VarSatFlow: A Variably Saturated groundwater Flow model (Paper [PDF](https://arxiv.org/abs/2210.04724))
 
-In this repository, we present an efficient, conservative and large scale numerical simulator for variably saturated flow in the limit of negligible capillary forces. The model modifies Richards equation to capture complete saturation. Here we implement a tensor product grid-based conservative finite difference solver. The codes are written in Open Source Discrete Operator Toolbox (PyDOT) developed by Shadab based on Hesse's toolbox in MATLAB (MDOT). The codes include one and two-dimensional tests which have been validated with Hydrus simulations, experiments and hydraulic theory. The repository contains codes of variably saturated groundwater model to replicate the figures in Shadab and Hesse (2024), Advances in Water Resources, Elsevier.
+In this repository, we present an efficient, conservative and large scale numerical simulator for variably saturated flow in the limit of negligible capillary forces. The model modifies Richards equation to capture complete saturation. Here we implement a tensor product grid-based conservative finite difference solver. The codes are written in Open Source Discrete Operator Toolbox (PyDOT) developed by Shadab based on Hesse's toolbox in MATLAB (MDOT). The codes include one and two-dimensional tests which have been validated with Hydrus simulations, experiments and hydraulic theory. The repository contains codes of variably saturated groundwater model to replicate all the main manuscript figures in Shadab and Hesse (2024), Advances in Water Resources, Elsevier.
 
 <p align="center">
 <img src="./Cover/CoverNew.png" height="400"> 
@@ -49,7 +49,7 @@ hyperbolic-infiltration-theory requires the following packages to function:
 
 
 ### Quick Usage
-After cloning the repository and installing the required libraries, run the python files corresponding to the figure numbers as given in the paper. Codes can be run either directly or on an IDE such as Anaconda Spyder. Use `%matplotlib qt` to change the plotting from inline to separate window in Spyder. The resulting plots are collected in the folder `Figures`.
+After cloning the repository and installing the required libraries, run the python files corresponding to the figure numbers as given in the paper. Codes can be run either directly or on an IDE such as Anaconda Spyder. Use `%matplotlib qt` to change the plotting from inline to separate window in Spyder. The solver contains auxillaries code. The source folder src contains two subfolders. The main Figure plots are in the subfolder `MainCodes` whereas the resulting plots are collected in the subfolder `Figures`. The name of the python code corresponds to the same figure in the paper.
 
 ### Non-dimensionalization
 The depth coordinate $`z`$ is scaled with characteristic length $`z_0`$, time is scaled with characteristic time $`z_0/f_c`$ and infiltration rate $`I(t)`$ (or volumetric flux) is scaled with the infiltration capacity $`f_c`$ or surface saturated hydraulic conductivity $`K`$. Therefore, the dimensionless variables are $`z'=z/z_0`$, $`t'=tf_c/z_0`$, and $`f'=I(t)/f_c`$.
