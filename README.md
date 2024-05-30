@@ -13,14 +13,14 @@ Shadab, M.A. and Hesse, M.A., 2024. A hyperbolic-elliptic PDE model and conserva
 Oden Institute for Computational Engineering and Sciences / Jackson School of Geosciences / University of Texas Institute for Geophysics
 The University of Texas at Austin
 
-### Example: Infiltration on top of an impermeable soil layer leading to formation of perched water table
+### Example: Infiltration in soil with an impermeable soil layer leading to formation of a perched water table
 
-https://github.com/mashadab/VarSatFlow/Cover/CoverVideo.mov
+[https://github.com/mashadab/VarSatFlow/Cover/CoverVideo.mov](https://github.com/mashadab/VarSatFlow/blob/main/Cover/CoverVideo.mov)
 
-Video : Flux partitioning in a steady gravity current passing symmetrically over a barrier.
+Video : Flux partitioning in a steady gravity current passing symmetrically over a barrier. $`s_w`$ is the water saturation which is the fraction of pore space occupied by water. Left: Actual video, Right: Saturated region being tracked with solid red line being saturated-unsaturated region boundary.
 
 <p align="center">
-<img src="./Cover/Cover.png" height="370">
+<img src="./Cover/Cover.png" height="300">
 </p>
 Figure : Flux partitioning in a steady gravity current passing over a barrier. 
 (a-d): Experiments conducted by Hesse and Woods (2010). 
