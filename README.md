@@ -52,7 +52,7 @@ hyperbolic-infiltration-theory requires the following packages to function:
 
 
 ### Quick Usage
-After cloning the repository and installing the required libraries, run the python files corresponding to the figure numbers as given in the paper. Codes can be run either directly or on an IDE such as Anaconda Spyder. Use `%matplotlib qt` to change the plotting from inline to separate window in Spyder. The solver contains auxillaries code. The source folder src contains two subfolders. The main Figure plots are in the subfolder `MainCodes` whereas the resulting plots are collected in the subfolder `Figures`. The name of the python code corresponds to the same figure in the paper.
+After cloning the repository and installing the required libraries, run the python files corresponding to the figure numbers as given in the paper. Codes can be run either directly or on an IDE such as Anaconda Spyder. Use `%matplotlib qt` to change the plotting from inline to separate window in Spyder. The Solver folder contains the auxillary code. The source folder src contains two subfolders. The main codes corresponding to Figures are in the subfolder `MainCodes` whereas the resulting plots are collected in the subfolder `Figures`. The name of the Python code bears the same figure number as given in the paper.
 
 ### Non-dimensionalization
 The depth coordinate $`z`$ is scaled with characteristic length $`z_0`$, time is scaled with characteristic time $`z_0/f_c`$ and infiltration rate $`I(t)`$ (or volumetric flux) is scaled with the infiltration capacity $`f_c`$ or surface saturated hydraulic conductivity $`K`$. Therefore, the dimensionless variables are $`z'=z/z_0`$, $`t'=tf_c/z_0`$, and $`f'=I(t)/f_c`$.
